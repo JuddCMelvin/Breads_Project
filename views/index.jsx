@@ -9,13 +9,17 @@ function Index ({breads}) {
             {/* This is a JSX comment. */}
             <ul>
             {
-            breads.map((bread, index)=> {
-                return (<li key={index}>
+                breads.map((bread, index)=> {
+                return (
+                    <li key={index}>
+                    <a href={`/breads/${index}`}>
                         {bread.name}
-                    </li>)
-                })
+                    </a>
+                    </li>
+                )
+                }) 
             }
-            </ul>
+        </ul>
         </Default>
     )
 }
